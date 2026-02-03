@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== INTRO OVERLAY ===== -->
+  <div class="intro-overlay" id="intro">
+    <div class="intro-content">
+      <div class="intro-cake">
+        🎂
+      </div>
+      <h1 class="intro-title">Happy Birthday</h1>
+      <div class="intro-name"></div>
+      <div class="intro-emojis">
+        <span>🎈</span>
+        <span>🎉</span>
+        <span>🎁</span>
+        <span>🎊</span>
+        <span>✨</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-blob" style="width: 300px; height: 300px; background: #fce7f3; top: 10%; left: 10%;"></div>
+      <div class="hero-bg-blob" style="width: 400px; height: 400px; background: #f3e8ff; top: 20%; right: 10%; animation-delay: -2s;"></div>
+      <div class="hero-bg-blob" style="width: 350px; height: 350px; background: #e0e7ff; bottom: 20%; left: 20%; animation-delay: -4s;"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="crown">
+        👑
+      </div>
+      <h1 class="hero-title">Happy Birthday</h1>
+      <div class="hero-name"></div>
+      <p class="hero-subtitle">
+        Today is all about celebrating YOU! <span class="emoji">🌟</span>
+      </p>
+    </div>
+
+    <div class="cake-container" id="cakeContainer">
+      <div class="cake-wrapper">
+        <div class="candles" id="candles">
+          <div class="candle">
+            <div class="flame"></div>
+            <div class="candle-stick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame"></div>
+            <div class="candle-stick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame"></div>
+            <div class="candle-stick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame"></div>
+            <div class="candle-stick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame"></div>
+            <div class="candle-stick"></div>
+          </div>
+        </div>
+
+        <div class="cake" id="cake">
+          <div class="frosting">
+            <div class="drip" style="left: 10px; height: 20px;"></div>
+            <div class="drip" style="left: 35px; height: 25px; animation-delay: 0.3s;"></div>
+            <div class="drip" style="left: 70px; height: 18px; animation-delay: 0.6s;"></div>
+            <div class="drip" style="left: 110px; height: 28px; animation-delay: 0.2s;"></div>
+            <div class="drip" style="right: 35px; height: 22px; animation-delay: 0.5s;"></div>
+            <div class="drip" style="right: 10px; height: 26px; animation-delay: 0.4s;"></div>
+          </div>
+          <div class="cake-layer layer-1"></div>
+          <div class="cake-layer cream-1"></div>
+          <div class="cake-layer layer-2"></div>
+          <div class="cake-layer cream-2"></div>
+          <div class="cake-layer layer-3">
+            <div class="cake-dots">
+              <div class="cake-dot"></div>
+              <div class="cake-dot" style="animation-delay: 0.1s;"></div>
+              <div class="cake-dot" style="animation-delay: 0.2s;"></div>
+              <div class="cake-dot" style="animation-delay: 0.3s;"></div>
+              <div class="cake-dot" style="animation-delay: 0.4s;"></div>
+              <div class="cake-dot" style="animation-delay: 0.5s;"></div>
+              <div class="cake-dot" style="animation-delay: 0.6s;"></div>
+              <div class="cake-dot" style="animation-delay: 0.7s;"></div>
+            </div>
+          </div>
+          <div class="cake-base"></div>
+          <div class="cut-line"></div>
+
+          <div class="cake-decorations">
+            <div class="cake-deco" style="top: -30px; left: -20px;">
+              🍓
+            </div>
+            <div class="cake-deco" style="top: -30px; right: -20px; animation-delay: 0.5s;">
+              🍰
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="cake-message" id="cakeMessage">
+        ✨ Click the cake to blow the candles! ✨
+      </p>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll for more magic</span>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== HEARTFELT WISH SECTION ===== -->
+  <section class="heartfelt-section section-hidden">
+    <div class="big-heart">
+      💝
+    </div>
+    <h2 class="section-title">From My Heart to Yours</h2>
+
+    <div class="wish-card">
+      <div class="flower-deco" style="top: 15px; left: 15px;">
+        🌸
+      </div>
+      <div class="flower-deco" style="top: 15px; right: 15px; animation-direction: reverse;">
+        🌺
+      </div>
+      <div class="flower-deco" style="bottom: 15px; left: 15px; animation-delay: -2s;">
+        🌷
+      </div>
+      <div class="flower-deco" style="bottom: 15px; right: 15px; animation-delay: -3s;">
+        💐
+      </div>
+
+      <p>
+        Dear <span class="name-in-wish"></span>,
+      </p>
+
+      <p>
+        On this special day (<span class="highlight-purple">13 February</span>), I want you to know how incredibly grateful I am to have you in my life. Your kindness, your laughter, and your beautiful spirit light up every room you enter.
+      </p>
+
+      <p>
+        You're not just a friend – you're a <span class="highlight-pink">blessing</span>, a <span class="highlight-purple">treasure</span>, and an <span class="highlight-rose">inspiration</span>. Your strength amazes me, your compassion moves me, and your friendship completes me.
+      </p>
+
+      <p>
+        May this new year of your life bring you everything your heart desires – love that knows no bounds, success in all your endeavors, and moments so beautiful they take your breath away.
+      </p>
+
+      <p class="signature">
+        Happy Birthday, Queen! 👑
+      </p>
+      <p style="color: #9ca3af; margin-top: 1rem;">
+        With all my love and warmest wishes 💕
+      </p>
+    </div>
+
+    <div class="wish-bubbles">
+      <div class="wish-bubble" style="animation-delay: 0s;">
+        May your day be as bright as your smile! 🌟
+      </div>
+      <div class="wish-bubble" style="animation-delay: 0.2s;">
+        Wishing you endless joy and laughter! 💕
+      </div>
+      <div class="wish-bubble" style="animation-delay: 0.4s;">
+        May all your dreams come true! ✨
+      </div>
+      <div class="wish-bubble" style="animation-delay: 0.6s;">
+        You deserve all the happiness! 🌈
+      </div>
+      <div class="wish-bubble" style="animation-delay: 0.8s;">
+        Here's to amazing adventures! 🎈
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMORY LANE SECTION ===== -->
+  <section class="memory-section section-hidden">
+    <h2 class="memory-title">📸 Memory Lane 📸</h2>
+    <p class="memory-subtitle">
+      Our beautiful moments together
+    </p>
+
+    <div class="photo-grid" id="photoGrid"></div>
+  </section>
+
+  <!-- ===== YOU ARE SECTION ===== -->
+  <section class="youare-section section-hidden">
+    <h2 class="youare-title">🌟 You Are... 🌟</h2>
+
+    <div class="traits-grid">
+      <div class="trait-card" style="animation-delay: 0s;">
+        <span class="trait-emoji">💖</span><span class="trait-text">Amazing</span>
+      </div>
+      <div class="trait-card" style="animation-delay: 0.1s;">
+        <span class="trait-emoji">🌸</span><span class="trait-text">Beautiful</span>
+      </div>
+      <div class="trait-card" style="animation-delay: 0.2s;">
+        <span class="trait-emoji">✨</span><span class="trait-text">Inspiring</span>
+      </div>
+      <div class="trait-card" style="animation-delay: 0.3s;">
+        <span class="trait-emoji">🦋</span><span class="trait-text">Unique</span>
+      </div>
+      <div class="trait-card" style="animation-delay: 0.4s;">
+        <span class="trait-emoji">🌺</span><span class="trait-text">Kind</span>
+      </div>
+      <div class="trait-card" style="animation-delay: 0.5s;">
+        <span class="trait-emoji">🎀</span><span class="trait-text">Lovely</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL SECTION ===== -->
+  <section class="final-section section-hidden">
+    <div class="gift-emoji">
+      🎁
+    </div>
+    <h2 class="final-title">May this year bring you...</h2>
+
+    <div class="final-wishes">
+      <p class="final-wish" style="animation-delay: 0s;">
+        🌟 Endless Happiness
+      </p>
+      <p class="final-wish" style="animation-delay: 0.15s;">
+        💕 Unconditional Love
+      </p>
+      <p class="final-wish" style="animation-delay: 0.3s;">
+        🎯 Success in Everything
+      </p>
+      <p class="final-wish" style="animation-delay: 0.45s;">
+        🌈 Beautiful Surprises
+      </p>
+      <p class="final-wish" style="animation-delay: 0.6s;">
+        ✨ Dreams Coming True
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      Made with 💖 by <a href="mailto:iamprashantgangwarbly@gmail.com">Prashant Gangwar</a> just for you
+    </p>
+    <div class="cake-icon">
+      🎂
+    </div>
+    <p>
+      Happy Birthday, <span class="footer-name"></span>! 🌸
+    </p>
+  </footer>
+</body>
+<script src="./script.js"></script>
+</html>
