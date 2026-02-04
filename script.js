@@ -42,6 +42,7 @@
     setTimeout(() => {
       cake.classList.add('cut');
       cakeMessage.textContent = '🎉 Make a wish, ' + BIRTHDAY_NAME + '! 🎉';
+      triggerConfetti();
     }, 1000);
   }
   });
@@ -63,6 +64,31 @@
   `;
   photoGrid.appendChild(card);
   });
+
+
+// ==========================================
+    // CONFETTI
+    // ==========================================
+    function triggerConfetti() {
+      const container = document.getElementById('confetti');
+      container.innerHTML = '';
+      const colors = ['#ff6b9d', '#c44569', '#f8b500', '#ff6348', '#7bed9f', '#70a1ff', '#a55eea', '#ff4757', '#feca57', '#48dbfb'];
+      
+      for (let i = 0; i < 150; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.width = (8 + Math.random() * 10) + 'px';
+        confetti.style.height = (8 + Math.random() * 10) + 'px';
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        confetti.style.animationDuration = (3 + Math.random() * 3) + 's';
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        container.appendChild(confetti);
+      }
+
+      setTimeout(() => container.innerHTML = '', 6000);
+    }
 
   // ==========================================
   // SCROLL REVEAL
