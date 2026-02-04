@@ -1036,7 +1036,8 @@ footer .cake-icon {
   }
 }
 
-.footer-name {
+.footer-name,
+footer a {
   font-family: 'Great Vibes', cursive;
   font-size: 1.5rem;
   color: #ec4899;
