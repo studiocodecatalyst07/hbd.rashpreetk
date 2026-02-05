@@ -184,6 +184,72 @@ body {
       100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
     }
 
+/* ========== BALLOONS ========== */
+    .balloons-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      animation: balloonFloat 12s ease-in-out infinite;
+    }
+
+    .balloon-body {
+      width: 50px;
+      height: 65px;
+      border-radius: 50%;
+      position: relative;
+      box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1), inset 5px 5px 15px rgba(255,255,255,0.4);
+    }
+
+    .balloon-body::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      width: 15px;
+      height: 15px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 50%;
+    }
+
+    .balloon-body::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 12px solid inherit;
+    }
+
+    .balloon-string {
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(to bottom, #999, #ccc);
+      margin: 0 auto;
+      animation: stringWave 2s ease-in-out infinite;
+    }
+
+    @keyframes balloonFloat {
+      0% { transform: translateY(0) translateX(0); }
+      25% { transform: translateY(-40vh) translateX(15px); }
+      50% { transform: translateY(-70vh) translateX(-15px); }
+      75% { transform: translateY(-90vh) translateX(10px); }
+      100% { transform: translateY(-120vh) translateX(0); }
+    }
+
+    @keyframes stringWave {
+      0%, 100% { transform: scaleX(1); }
+      50% { transform: scaleX(1.2); }
+    }
+
 /* ========== HERO SECTION ========== */
 .hero {
   min-height: 100vh;
