@@ -125,6 +125,105 @@
       });
     }
 
+  // ─── MUSIC (using Web Audio API for a simple tone melody) ───
+  let musicPlaying = false;
+  let audioCtx;
+
+  function toggleMusic() {
+    if (!musicPlaying) {
+      musicPlaying = true;
+      playBirthdayMelody();
+    }
+  }
+
+  function playBirthdayMelody() {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    // Happy Birthday melody (simplified)
+    // Each entry: [frequency in Hz, duration in seconds]
+    const notes = [
+      [262,
+        0.3],
+      [262,
+        0.3],
+      [294,
+        0.6],
+      [262,
+        0.6],
+      [349,
+        0.6],
+      [330,
+        1.0],
+      [262,
+        0.3],
+      [262,
+        0.3],
+      [294,
+        0.6],
+      [262,
+        0.6],
+      [392,
+        0.6],
+      [349,
+        1.0],
+      [262,
+        0.3],
+      [262,
+        0.3],
+      [523,
+        0.6],
+      [440,
+        0.6],
+      [349,
+        0.6],
+      [330,
+        0.6],
+      [294,
+        1.0],
+      [466,
+        0.3],
+      [466,
+        0.3],
+      [440,
+        0.6],
+      [349,
+        0.6],
+      [392,
+        0.6],
+      [349,
+        1.0]
+    ];
+
+    let time = audioCtx.currentTime + 0.1;
+
+    function playSequence() {
+      if (!musicPlaying || !audioCtx) return;
+
+      notes.forEach(([freq, dur]) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.08, time);
+        gain.gain.exponentialRampToValueAtTime(0.001, time + dur);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(time);
+        osc.stop(time + dur);
+        time += dur * 0.85;
+      });
+
+      const totalDuration = notes.reduce((sum, [, d]) => sum + d * 0.85, 0);
+
+      setTimeout(() => {
+        time = audioCtx ? audioCtx.currentTime + 0.3: 0;
+        musicPlaying = false;
+      }, totalDuration * 1000 + 500);
+    }
+
+    playSequence();
+  }
+
   // ==========================================
   // SCROLL REVEAL
   // ==========================================
