@@ -44,6 +44,7 @@
       cake.classList.add('cut');
       cakeMessage.textContent = '🎉 Make a wish, ' + BIRTHDAY_NAME + '! 🎉';
       triggerConfetti();
+      playBirthdayMelody();
     }, 1000);
   }
   });
@@ -126,15 +127,7 @@
     }
 
   // ─── MUSIC (using Web Audio API for a simple tone melody) ───
-  let musicPlaying = false;
   let audioCtx;
-
-  function toggleMusic() {
-    if (!musicPlaying) {
-      musicPlaying = true;
-      playBirthdayMelody();
-    }
-  }
 
   function playBirthdayMelody() {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -197,7 +190,7 @@
     let time = audioCtx.currentTime + 0.1;
 
     function playSequence() {
-      if (!musicPlaying || !audioCtx) return;
+      if (!audioCtx) return;
 
       notes.forEach(([freq, dur]) => {
         const osc = audioCtx.createOscillator();
@@ -212,13 +205,6 @@
         osc.stop(time + dur);
         time += dur * 0.85;
       });
-
-      const totalDuration = notes.reduce((sum, [, d]) => sum + d * 0.85, 0);
-
-      setTimeout(() => {
-        time = audioCtx ? audioCtx.currentTime + 0.3: 0;
-        musicPlaying = false;
-      }, totalDuration * 1000 + 500);
     }
 
     playSequence();
