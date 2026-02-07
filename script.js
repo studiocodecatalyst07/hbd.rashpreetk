@@ -105,7 +105,7 @@
         ['#e879f9', '#d946ef'],
         ['#818cf8', '#6366f1']
       ];
-      const positions = ['12%', '36%', '64%', '76%', 24%', '88%'];
+      const positions = ['12%', '36%', '64%', '76%', '24%', '88%'];
 
       positions.forEach((pos, i) => {
         const balloon = document.createElement('div');
