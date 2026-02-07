@@ -133,7 +133,7 @@
   function playBirthdayMelody() {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-    // Happy Birthday melody (simplified)
+    /* Happy Birthday melody (simplified)
     // Each entry: [frequency in Hz, duration in seconds]
     const notes = [
       [262,
@@ -186,6 +186,88 @@
         0.6],
       [349,
         1.0]
+    ];*/
+    
+    // Happy Birthday – works with "dear Rashpreet"
+    const notes = [
+      [262,
+        0.3],
+      // C4
+      [262,
+        0.3],
+      // C4
+      [294,
+        0.6],
+      // D4
+      [262,
+        0.6],
+      // C4
+      [349,
+        0.6],
+      // F4
+      [330,
+        1.0],
+      // E4
+
+      [262,
+        0.3],
+      // C4
+      [262,
+        0.3],
+      // C4
+      [294,
+        0.6],
+      // D4
+      [262,
+        0.6],
+      // C4
+      [392,
+        0.6],
+      // G4
+      [349,
+        1.0],
+      // F4
+
+      // "dear Rash-preet" line
+      [262,
+        0.3],
+      // C4
+      [262,
+        0.3],
+      // C4
+      [523,
+        0.6],
+      // C5
+      [440,
+        0.6],
+      // A4
+      [349,
+        0.6],
+      // F4
+      [330,
+        0.6],
+      // E4
+      [294,
+        1.0],
+      // D4
+
+      [466,
+        0.3],
+      // A#4 / Bb4
+      [466,
+        0.3],
+      // A#4
+      [440,
+        0.6],
+      // A4
+      [349,
+        0.6],
+      // F4
+      [392,
+        0.6],
+      // G4
+      [349,
+        1.0] // F4
     ];
 
     let time = audioCtx.currentTime + 0.1;
